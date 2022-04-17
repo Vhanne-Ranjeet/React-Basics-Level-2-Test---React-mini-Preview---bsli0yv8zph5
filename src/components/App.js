@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import '../styles/App.css';
 import { Preview } from './Preview';
 const App = () => {
-  const [content, setContent] = useState("hello world");
+  const [content, setContent] = useState("hello newton");
   const [padding, setPadding] = useState(5);
-  const [size, setSize] = useState(10);
+  const [fontSize, setSize] = useState(10);
   return (
     <div id="main">
       <div>
@@ -16,7 +16,7 @@ const App = () => {
           setSize(e.target.value)
         }}></input><br />
       </div>
-      <Preview content={content} fontSize={size+"px"} padding={padding+'px'} />
+      <Preview content={content} fontSize={fontSize+"px"} padding={padding+'px'} />
     </div>
   )
 }
