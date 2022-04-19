@@ -16,7 +16,7 @@ const App = () => {
           setSize(e.target.value)
         }}></input><br />
       </div>
-         {content && padding && fontSize?<Preview content={content} fontSize={fontSize+"px"} padding={padding+'px'} />:null}
+         {content?<Preview content={content} fontSize={fontSize+"px"} padding={padding+'px'} />:null}
        
     </div>
   )
