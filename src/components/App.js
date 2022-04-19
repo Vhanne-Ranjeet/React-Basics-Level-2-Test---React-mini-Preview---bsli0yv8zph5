@@ -7,7 +7,7 @@ const App = () => {
   const [fontSize, setSize] = useState(10);
   return (
     <div id="main">
-      <div>
+      <div id="Preview">
         Content<input type="text" value={content} id="contentInput" onChange={(e) => {
           setContent(e.target.value);
         }}></input><br />
@@ -15,8 +15,8 @@ const App = () => {
         Font Size<input type="number" value={fontSize} id="fontSizeInput" onChange={(e) => {
           setSize(e.target.value)
         }}></input><br />
-        <Preview content={content} fontSize={fontSize+"px"} padding={padding+'px'} />
       </div>
+      <Preview content={content} fontSize={fontSize+"px"} padding={padding+'px'} />
     </div>
   )
 }
