@@ -15,9 +15,8 @@ const App = () => {
         Font Size<input type="number" value={fontSize} id="fontSizeInput" onChange={(e) => {
           setSize(e.target.value)
         }}></input><br />
+        <Preview content={content} fontSize={fontSize+"px"} padding={padding+'px'} />
       </div>
-         {content?<Preview content={content} fontSize={fontSize+"px"} padding={padding+'px'} />:null}
-       
     </div>
   )
 }
