@@ -8,6 +8,7 @@ const App = () => {
   return (
     <div id="main">
       <div id="Preview">
+        <form>
         Content<input type="text" value={content} id="contentInput" onChange={(e) => {
           setContent(e.target.value);
         }}></input><br />
@@ -15,6 +16,7 @@ const App = () => {
         Font Size<input type="number" value={fontSize} id="fontSizeInput" onChange={(e) => {
           setSize(e.target.value)
         }}></input><br />
+        </form>
       </div>
       <Preview content={content} fontSize={fontSize+"px"} padding={padding+'px'} />
     </div>
