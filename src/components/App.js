@@ -2,13 +2,12 @@ import React, { useState } from 'react'
 import '../styles/App.css';
 import { Preview } from './Preview';
 const App = () => {
-  const [content, setContent] = useState("hello world");
+  const [content, setContent] = useState("hello newton");
   const [padding, setPadding] = useState(5);
   const [fontSize, setSize] = useState(10);
   return (
     <div id="main">
-      <div id="Preview">
-        <form>
+      <div>
         Content<input type="text" value={content} id="contentInput" onChange={(e) => {
           setContent(e.target.value);
         }}></input><br />
@@ -16,7 +15,6 @@ const App = () => {
         Font Size<input type="number" value={fontSize} id="fontSizeInput" onChange={(e) => {
           setSize(e.target.value)
         }}></input><br />
-        </form>
       </div>
       <Preview content={content} fontSize={fontSize+"px"} padding={padding+'px'} />
     </div>
